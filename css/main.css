@@ -98,6 +98,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .middle header .header-split .opsLogo {
@@ -144,6 +147,25 @@ body {
       -ms-flex: 3;
           flex: 3;
   min-height: 60vh;
+}
+
+.main-content > article form ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.main-content > article form ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-content > aside {
