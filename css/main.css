@@ -230,4 +230,40 @@ body {
           flex: 3;
   background-color: chocolate;
 }
+
+.main-content > aside .grid-container {
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -ms-grid-rows: 22% 22% 22%;
+      grid-template-rows: 22% 22% 22%;
+  grid-gap: 20px 20px;
+}
+
+.main-content > aside .grid-container .grid-item {
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 5px;
+}
+
+.main-content > aside .grid-container .grid-item img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-content > aside .grid-container .grid-item .title {
+  padding: 1em 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-content > aside .grid-container .grid-item .description {
+  text-align: center;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
 /*# sourceMappingURL=main.css.map */
