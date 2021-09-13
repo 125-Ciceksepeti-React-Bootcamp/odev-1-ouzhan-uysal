@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #204599;
+    --secondColor: #2ac2ea;
+    --thirdColor: #69388c;
+    --fourthColor: #ac589c;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    flex: 1;
+    .navbar-split {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 5rem;
+        background-color: #fff;
+        .navlink {
+            color: #204599;
+            ul {
+                padding-top: 2em;
+                li {
+                    padding-bottom: .5em;
+                    list-style-type: none;
+                    a {
+                        font-size: x-large;
+                        display: flex;
+                        color: #204599;
+                        text-decoration: none;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    background-color: brown;
+    header {
+        display: flex;
+        background-color: darkorange;
+        height: 15vh;
+        .header-split {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .opsLogo {
+                margin: 0.5rem;
+            }
+            .searchbar {
+                display: flex;
+                align-items: center;
+                .searchbar-split {
+                    display: flex;
+                }
+            }
+            .inodeaLogo {
+                max-width: 10vh;
+                img {
+                    max-width:100%;
+                    max-height:100%;
+                }
+            }
+        }
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    > article {
+        flex: 3;
+        min-height: 60vh;
+    }
+    > aside {
+        flex: 3;
+        background-color: chocolate;
+    }
+}
