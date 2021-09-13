@@ -12,7 +12,7 @@
     <title>Patika - First Project</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
@@ -27,13 +27,21 @@
         <div class="navbar-split">
             <div class="opsLogo">
                 <img src="images/ops.png" alt="OPS Logosu">
-                <i class="fa fa-wpforms"></i>
             </div>
             <div class="navlink">
                 <ul>
-                    <li><a href="#">Form</a></li>
-                    <li><a href="#">Grid Table</a></li>
-                    <li><a href="#">Boş</a></li>
+                    <li>
+                        <i class="fa fa-wpforms"></i>
+                        <a href="#">Show Form</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-th"></i>
+                        <a href="#">Show Grid Table</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-th"></i>
+                        <a href="#">Show Everything</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -48,7 +56,8 @@
                 <div class="searchbar">
                     <div class="searchbar-split">
                         <form>
-                            <input type="search" name="searchbar">
+                            <input type="search" name="searchbar" placeholder="Search...">
+                            <i class="fa fa-search"></i>
                         </form>
                     </div>
                 </div>
