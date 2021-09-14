@@ -6,10 +6,13 @@
 }
 
 :root {
+  --color1: #e4e6eb;
+  --color2: #d3d6de;
+  --color3: #b6bbc9;
+  --color4: #98a0b3;
+  --color5: #7b859d;
   --mainColor: #204599;
   --secondColor: #2ac2ea;
-  --thirdColor: #69388c;
-  --fourthColor: #ac589c;
 }
 
 body {
@@ -31,6 +34,8 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin: 1rem;
+  height: 95vh;
 }
 
 .navbar .navbar-split {
@@ -43,7 +48,7 @@ body {
           flex-direction: column;
   margin: 0 auto;
   padding: 5rem;
-  background-color: #fff;
+  background-color: var(--color2);
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -95,8 +100,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: darkorange;
-  height: 15vh;
+  margin: 1rem;
+  background-color: var(--color2);
+  height: 10vh;
 }
 
 .middle header .header-split {
@@ -156,12 +162,12 @@ body {
 }
 
 .middle header .header-split .inodeaLogo {
-  padding-right: 1rem;
+  padding-right: 5rem;
 }
 
 .middle header .header-split .inodeaLogo img {
-  width: 10vw;
-  max-width: 50%;
+  height: 10vh;
+  max-height: 20%;
 }
 
 .main-content {
@@ -179,6 +185,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin: 1rem;
   min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,7 +196,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ac589c;
+  background-color: var(--color2);
 }
 
 .main-content > article form ul {
@@ -227,7 +234,8 @@ body {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
-  background-color: chocolate;
+  margin: 1rem;
+  background-color: var(--color2);
 }
 
 .main-content > aside .grid-container {

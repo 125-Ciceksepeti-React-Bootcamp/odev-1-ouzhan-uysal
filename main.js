@@ -6,14 +6,14 @@ fetch("https://jsonplaceholder.typicode.com/posts").then(
     }
 ).then(
     responseJson => {
-        console.log(responseJson);
+        // console.log(responseJson);
         let gridElem = "";
         for (let i = 0; i < responseJson.length; i++) {
             if (i === 10) {
                 break;
             }
             else {
-                console.log(responseJson[i]);
+                // console.log(responseJson[i]);
                 gridElem += `
                         <div class="grid-item">
                         <img src="images/ops.png" alt="item${responseJson[i].id}">

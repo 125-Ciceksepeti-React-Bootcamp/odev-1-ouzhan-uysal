@@ -5,10 +5,13 @@
 }
 
 :root {
+    --color1: #e4e6eb;
+    --color2: #d3d6de;
+    --color3: #b6bbc9;
+    --color4: #98a0b3;
+    --color5: #7b859d;
     --mainColor: #204599;
     --secondColor: #2ac2ea;
-    --thirdColor: #69388c;
-    --fourthColor: #ac589c;
 }
 
 body {
@@ -21,12 +24,14 @@ body {
 .navbar {
     display: flex;
     flex: 1;
+    margin: 1rem;
+    height: 95vh;
     .navbar-split {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         padding: 5rem;
-        background-color: #fff;
+        background-color: var(--color2);
         width: max-content;
         .navlink {
             color: #204599;
@@ -57,8 +62,9 @@ body {
     flex: 7;
     header {
         display: flex;
-        background-color: darkorange;
-        height: 15vh;
+        margin: 1rem;
+        background-color: var(--color2);
+        height: 10vh;
         .header-split {
             display: flex;
             width: 100%;
@@ -91,10 +97,10 @@ body {
                 }
             }
             .inodeaLogo {
-                padding-right: 1rem;
+                padding-right: 5rem;
                 img {
-                    width: 10vw;
-                    max-width: 50%;
+                    height: 10vh;
+                    max-height: 20%;
                 }
             }
         }
@@ -107,11 +113,12 @@ body {
     height: 85vh;
     > article {
         flex: 1;
+        margin: 1rem;
         min-height: 60vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ac589c;
+        background-color: var(--color2);
         form {
             ul {
                 list-style-type: none;
@@ -134,7 +141,8 @@ body {
     }
     > aside {
         flex: 3;
-        background-color: chocolate;
+        margin: 1rem;
+        background-color: var(--color2);
         .grid-container {
             display: grid;
             padding: 20px;
