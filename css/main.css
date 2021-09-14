@@ -156,7 +156,7 @@ body {
 }
 
 .middle header .header-split .inodeaLogo {
-  padding-right: 5rem;
+  padding-right: 1rem;
 }
 
 .middle header .header-split .inodeaLogo img {
@@ -176,9 +176,9 @@ body {
 }
 
 .main-content > article {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,8 +234,8 @@ body {
   display: -ms-grid;
   display: grid;
   padding: 20px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 20em 20em 20em;
       grid-template-rows: 20em 20em 20em;
   grid-gap: 20px 20px;

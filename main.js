@@ -1,5 +1,52 @@
 /* HTTP Request / Fetch API */
-
+fetch("https://jsonplaceholder.typicode.com/posts").then(
+    response => {
+        // console.log("Fetch Response: ", response);
+        return response.json();
+    }
+).then(
+    responseJson => {
+        console.log(responseJson);
+        let gridElem = "";
+        for (let i = 0; i < responseJson.length; i++) {
+            if (i === 10) {
+                break;
+            }
+            else {
+                console.log(responseJson[i]);
+                gridElem += `
+                        <div class="grid-item">
+                        <img src="images/ops.png" alt="item${responseJson[i].id}">
+                        <p class="title">${responseJson[i].title}</p>
+                        <p class="description">${responseJson[i].body}</p>
+                        <button class="readMore" id="readMore">Read More</button>
+                        </div>
+                        `;
+            }
+            document.getElementById("contents").innerHTML = gridElem;
+        }
+        // responseJson.forEach(element => {
+        //     try {
+        //         if(responseJson === responseJson[10]){
+        //             break;
+        //         }
+        //         let gridElem = `
+        //         <div class="grid-item">
+        //         <img src="images/ops.png" alt="item${element.id}">
+        //         <p class="title">${element.title}</p>
+        //         <p class="description">${element.body}</p>
+        //         <button class="readMore" id="readMore">Read More</button>
+        //         </div>
+        //         `;
+        //         // document.getElementById("contents").innerHTML = gridElem;
+        //         console.log(element);
+        //     } catch (err) {
+        //         console.log(err);
+        //         throw "Bir elemanda hata aldın hacı."
+        //     }
+        // });
+    }
+)
 
 
 /* Search Bar Actions */
@@ -33,7 +80,10 @@ openModal.onclick = function () {
     const expec = document.getElementById("expec").value;
     const msg = `xxx`;
     // DOM Manipulation
-    // document.getElementById("modal-body").innerHTML = msg;
+    /* 
+        innerHTML ile html kısmına ekleme yapmaya çalışırken defer etiketi eklediğim halde; "Uncaught TypeError: Cannot set property 'innerHTML' of null" hatası alıyorum
+    */
+    document.getElementById("modal-body").innerHTML = msg;
 
     // Show Modal
     modal.style.display = "block";
