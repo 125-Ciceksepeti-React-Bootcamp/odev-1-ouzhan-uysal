@@ -19,7 +19,7 @@ fetch("https://jsonplaceholder.typicode.com/posts").then(
                         <img src="images/ops.png" alt="item${responseJson[i].id}">
                         <p class="title">${responseJson[i].title}</p>
                         <p class="description">${responseJson[i].body}</p>
-                        <button class="readMore" id="readMore">Read More</button>
+                        <button class="readMore">Read More</button>
                         </div>
                         `;
             }
@@ -46,7 +46,7 @@ fetch("https://jsonplaceholder.typicode.com/posts").then(
         //     }
         // });
     }
-)
+).catch(err => console.log("Hata: ", err));
 
 
 /* Search Bar Actions */
@@ -73,17 +73,26 @@ openModal.onclick = function () {
     const email = document.getElementById("email").value;
     const title = document.getElementById("title").value;
     const phone = document.getElementById("phone").value;
-    const cancel = document.getElementById("cancel").value;
+    const registration = document.querySelector('input[name="registration"]:checked');
     const trainingSession = document.getElementById("trainingSession").value;
-    const jobFunc = document.getElementById("jobFunc").value;
+    const jobFunc = document.querySelector('input[name="jobFunc"]:checked');
     const dietary = document.getElementById("dietary").value;
     const expec = document.getElementById("expec").value;
-    const msg = `xxx`;
+    let formInput = `
+    <p><strong>Company:</strong>${company}</p>
+    <p><strong>First Name:</strong>${fname}</p>
+    <p><strong>Last Name:</strong>${lname}</p>
+    <p><strong>Email:</strong>${email}</p>
+    <p><strong>Title:</strong>${title}</p>
+    <p><strong>Phone:</strong>${phone}</p>
+    <p><strong>Cancel Registration:</strong>${registration}</p>
+    <p><strong>252 Training Session 2010:</strong>${trainingSession}</p>
+    <p><strong>Job Function:</strong>${jobFunc}</p>
+    <p><strong>Distery Requirements:</strong>${dietary}</p>
+    <p><strong>Exceptations:</strong>${expec}</p>
+    `;
     // DOM Manipulation
-    /* 
-        innerHTML ile html kısmına ekleme yapmaya çalışırken defer etiketi eklediğim halde; "Uncaught TypeError: Cannot set property 'innerHTML' of null" hatası alıyorum
-    */
-    document.getElementById("modal-body").innerHTML = msg;
+    document.getElementById("modal-b").innerHTML = formInput;
 
     // Show Modal
     modal.style.display = "block";
@@ -100,10 +109,21 @@ window.onclick = function (event) {
 
 
 /* Navbar Link Actions */
-
-
+// Yukarıdaki fonksiyon ile aşadaki aynı işleve sahip
+$(function() {
+    $('#nav li').on('click', function() {
+        console.log($('#nav li .active'));
+    });
+});
+// const navActive = document.querySelector('#nav li');
+// navActive.forEach(elem => {
+//     elem.addEventListener('click', function() {
+//         this.classList.toggle('.active');
+//     });
+// });
 
 /* Read More Buttons */
-// alert("Süsüm ben :))")
-
-
+const readMeBtns = document.querySelectorAll('.readMore');
+readMeBtns.forEach(el => el.addEventListener('click', event => {
+    console.log("Süsüm Ben :))");
+}));

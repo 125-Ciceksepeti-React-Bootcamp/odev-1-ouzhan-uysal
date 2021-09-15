@@ -37,18 +37,25 @@
                 <img src="images/ops.png" alt="OPS Logosu">
             </div>
             <div class="navlink">
-                <ul>
+                <ul id="nav">
+                    <li class="active">
+                        <i class="fa fa-eye"></i>
+                        <a href="#show" id="show" name="show">Show</a>
+                    </li>
+                    <hr style="border: 1px solid #204599;">
                     <li>
                         <i class="fa fa-wpforms"></i>
-                        <a href="#" id="showForm">Show Form</a>
+                        <a href="#form" id="showForm">Show Form</a>
                     </li>
+                    <hr style="border: 1px solid #204599;">
                     <li>
-                        <i class="fas fa-th"></i>
-                        <a href="#" id="showGrid">Show Grid Table</a>
+                        <i class="fa fa-th"></i>
+                        <a href="#grid" id="showGrid">Show Grid Table</a>
                     </li>
+                    <hr style="border: 1px solid #204599;">
                     <li>
-                        <i class="fas fa-th"></i>
-                        <a href="#" id="sideEverything">Side Everything</a>
+                        <i class="fa fa-eye-slash"></i>
+                        <a href="#hide" id="sideEverything">Hide</a>
                     </li>
                 </ul>
             </div>
@@ -104,8 +111,8 @@
                             <input type="phone" name="phone" id="phone">
                         </li>
                         <li>
-                            <label for="cancel">Cancel Registration:</label>
-                            <input type="checkbox" name="cancel" id="cancel">
+                            <label for="registration">Cancel Registration:</label>
+                            <input type="checkbox" name="registration" id="registration">
                         </li>
                         <li>
                             <label for="trainingSession">252 Training Session 2010:</label>
@@ -136,9 +143,7 @@
                             <span class="close-modal"></span>
                             <h2>Form Informations</h2>
                         </div>
-                        <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
+                        <div class="modal-body" id="modal-b">
                         </div>
                         <!-- <div class="modal-footer">
                             <h3>Modal Footer</h3>
