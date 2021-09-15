@@ -1,4 +1,4 @@
-/* HTTP Request / Fetch API */
+/* Fetch API */
 fetch("https://jsonplaceholder.typicode.com/posts").then(
     response => {
         // console.log("Fetch Response: ", response);
@@ -108,22 +108,42 @@ window.onclick = function (event) {
 }
 
 
+
 /* Navbar Link Actions */
-// Yukarıdaki fonksiyon ile aşadaki aynı işleve sahip
-$(function() {
-    $('#nav li').on('click', function() {
-        console.log($('#nav li .active'));
+$(document).ready(function(){
+    $(".navLink li").on("click", function(){
+        var dataId = $(this).attr("data-id");
+        const formTag = document.querySelector(".form-content");
+        const gridTag = document.querySelector(".grid-content");
+        if (dataId === "show"){
+            formTag.style.display = "";
+            gridTag.style.display = "";
+        } else if (dataId === "showForm") {
+            formTag.style.display = "flex";
+            gridTag.style.display = "none";
+        } else if (dataId === "showGrid") {
+            gridTag.style.display = "flex";
+            formTag.style.display = "none";
+        } else if (dataId === "hide") {
+            formTag.style.display = "none";
+            gridTag.style.display = "none";
+        } else {
+            alert("Bi sıkıntı var haciii")
+        }
     });
 });
-// const navActive = document.querySelector('#nav li');
-// navActive.forEach(elem => {
-//     elem.addEventListener('click', function() {
-//         this.classList.toggle('.active');
-//     });
-// });
+
+
 
 /* Read More Buttons */
+document.body.addEventListener('click', function (evt) {
+    if (evt.target.className === "readMore") {
+        alert("Süsüm ben :))");
+    }
+}, false);
+/*
 const readMeBtns = document.querySelectorAll('.readMore');
 readMeBtns.forEach(el => el.addEventListener('click', event => {
     console.log("Süsüm Ben :))");
 }));
+*/

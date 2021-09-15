@@ -226,11 +226,6 @@ body {
       -ms-flex: 1;
           flex: 1;
   margin: 1rem;
-  min-height: 60vh;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -242,9 +237,6 @@ body {
 
 .main-content > article form {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .main-content > article form ul {
