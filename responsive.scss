@@ -3,6 +3,12 @@
         article {
             display: none;
         }
+        aside {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 25vh 25vh 25vh;
+            }
+        }
     }
 }
 

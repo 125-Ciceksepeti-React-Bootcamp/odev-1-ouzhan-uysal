@@ -49,6 +49,7 @@ body {
                     list-style-type: none;
                     border: .5px solid #204599;
                     border-radius: 5px;
+                    cursor: pointer;
                     &:hover {
                         color: var(--color2);
                         background-color: #204599;
@@ -103,8 +104,10 @@ body {
                     display: flex;
                     form {
                         display: flex;
+                        position: relative;
                         justify-content: flex-end;
                         input {
+                            padding-left: 4rem !important;
                             width: 50rem;
                             border-radius: 5px;
                             &[type="search"] {
@@ -115,6 +118,7 @@ body {
                             display: block;
                             position: absolute;
                             padding: 15px;
+                            left: 0;
                         }
                     }
                 }
@@ -133,7 +137,6 @@ body {
 .main-content {
     display: flex;
     flex-direction: row;
-    height: 85vh;
     > article {
         flex: 1;
         margin: 1rem;

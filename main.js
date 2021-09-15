@@ -73,9 +73,9 @@ openModal.onclick = function () {
     const email = document.getElementById("email").value;
     const title = document.getElementById("title").value;
     const phone = document.getElementById("phone").value;
-    const registration = document.querySelector('input[name="registration"]:checked');
+    const registration = document.querySelector('input[name="registration"]').checked;
     const trainingSession = document.getElementById("trainingSession").value;
-    const jobFunc = document.querySelector('input[name="jobFunc"]:checked');
+    const jobFunc = document.querySelector('input[name="jobFunc"]').checked;
     const dietary = document.getElementById("dietary").value;
     const expec = document.getElementById("expec").value;
     let formInput = `
@@ -116,8 +116,8 @@ $(document).ready(function(){
         const formTag = document.querySelector(".form-content");
         const gridTag = document.querySelector(".grid-content");
         if (dataId === "show"){
-            formTag.style.display = "";
-            gridTag.style.display = "";
+            formTag.style.display = "flex";
+            gridTag.style.display = "flex";
         } else if (dataId === "showForm") {
             formTag.style.display = "flex";
             gridTag.style.display = "none";

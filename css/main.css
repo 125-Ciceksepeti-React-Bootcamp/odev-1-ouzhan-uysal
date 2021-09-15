@@ -81,6 +81,7 @@ body {
   list-style-type: none;
   border: .5px solid #204599;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .navbar .navbar-split .navlink ul li:hover {
@@ -181,12 +182,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
 .middle header .header-split .searchbar .searchbar-split form input {
+  padding-left: 4rem !important;
   width: 50rem;
   border-radius: 5px;
 }
@@ -199,6 +202,7 @@ body {
   display: block;
   position: absolute;
   padding: 15px;
+  left: 0;
 }
 
 .middle header .header-split .inodeaLogo {
@@ -218,7 +222,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 85vh;
 }
 
 .main-content > article {
