@@ -286,10 +286,8 @@ body {
   display: -ms-grid;
   display: grid;
   padding: 20px;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 25vh 25vh 25vh;
-      grid-template-rows: 25vh 25vh 25vh;
+  -ms-grid-columns: (minmax(20em, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
   grid-gap: 20px 20px;
 }
 

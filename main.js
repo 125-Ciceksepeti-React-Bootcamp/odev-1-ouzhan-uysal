@@ -1,52 +1,55 @@
 /* Fetch API */
-fetch("https://jsonplaceholder.typicode.com/posts").then(
-    response => {
-        // console.log("Fetch Response: ", response);
-        return response.json();
-    }
-).then(
-    responseJson => {
-        // console.log(responseJson);
-        let gridElem = "";
-        for (let i = 0; i < responseJson.length; i++) {
-            if (i === 10) {
-                break;
-            }
-            else {
-                // console.log(responseJson[i]);
-                gridElem += `
+fetchPosts = async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    let gridElem = "";
+    data.slice(-10).forEach(el => {
+        try {
+            // console.log(element);
+            gridElem += `
                         <div class="grid-item">
-                        <img src="images/ops.png" alt="item${responseJson[i].id}">
-                        <p class="title">${responseJson[i].title}</p>
-                        <p class="description">${responseJson[i].body}</p>
-                        <button class="readMore">Read More</button>
+                        <img src="images/ops.png" alt="item${el.id}">
+                        <p class="title">${el.title}</p>
+                        <p class="description">${el.body}</p>
+                        <button class="readMore" id="readMore">Read More</button>
                         </div>
                         `;
-            }
             document.getElementById("contents").innerHTML = gridElem;
+        } catch (err) {
+            console.log(err);
+            throw "Bir elemanda hata aldın hacı."
         }
-        // responseJson.forEach(element => {
-        //     try {
-        //         if(responseJson === responseJson[10]){
-        //             break;
-        //         }
-        //         let gridElem = `
-        //         <div class="grid-item">
-        //         <img src="images/ops.png" alt="item${element.id}">
-        //         <p class="title">${element.title}</p>
-        //         <p class="description">${element.body}</p>
-        //         <button class="readMore" id="readMore">Read More</button>
-        //         </div>
-        //         `;
-        //         // document.getElementById("contents").innerHTML = gridElem;
-        //         console.log(element);
-        //     } catch (err) {
-        //         console.log(err);
-        //         throw "Bir elemanda hata aldın hacı."
-        //     }
-        // });
-    }
-).catch(err => console.log("Hata: ", err));
+    });
+};
+fetchPosts();
+/*
+fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => {
+        // console.log("Fetch Response: ", response);
+        return response.json();
+    }).then(responseJson => {
+        // console.log(responseJson);
+        let gridElem = "";
+        responseJson.slice(-10).forEach(element => {
+            try {
+                // console.log(element);
+                gridElem += `
+                <div class="grid-item">
+                <img src="images/ops.png" alt="item${element.id}">
+                <p class="title">${element.title}</p>
+                <p class="description">${element.body}</p>
+                <button class="readMore" id="readMore">Read More</button>
+                </div>
+                `;
+                document.getElementById("contents").innerHTML = gridElem;
+            } catch (err) {
+                console.log(err);
+                throw "Bir elemanda hata aldın hacı."
+            }
+        });
+    }).catch(err => console.log("Hata: ", err));
+*/
+
 
 
 /* Search Bar Actions */
@@ -58,6 +61,7 @@ $(document).ready(function () {
         });
     });
 });
+
 
 
 /* Modals */
@@ -110,14 +114,14 @@ window.onclick = function (event) {
 
 
 /* Navbar Link Actions */
-$(document).ready(function(){
-    $(".navLink li").on("click", function(){
+$(document).ready(function () {
+    $(".navLink li").on("click", function () {
         var dataId = $(this).attr("data-id");
         const formTag = document.querySelector(".form-content");
         const gridTag = document.querySelector(".grid-content");
-        if (dataId === "show"){
-            formTag.style.display = "flex";
-            gridTag.style.display = "flex";
+        if (dataId === "show") {
+            formTag.style.display = "";
+            gridTag.style.display = "";
         } else if (dataId === "showForm") {
             formTag.style.display = "flex";
             gridTag.style.display = "none";

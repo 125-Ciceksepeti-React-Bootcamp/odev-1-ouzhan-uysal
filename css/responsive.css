@@ -3,10 +3,8 @@
     display: none;
   }
   .main-content aside .grid-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 25vh 25vh 25vh;
-        grid-template-rows: 25vh 25vh 25vh;
+    -ms-grid-columns: (minmax(10em, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
   }
 }
 
