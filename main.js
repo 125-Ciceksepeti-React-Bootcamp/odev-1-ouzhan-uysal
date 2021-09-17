@@ -96,7 +96,7 @@ openModal.onclick = function () {
     <p><strong>Exceptations:</strong>${expec}</p>
     `;
     // DOM Manipulation
-    document.getElementById("modal-b").innerHTML = formInput;
+    document.getElementById("modal-body").innerHTML = formInput;
 
     // Show Modal
     modal.style.display = "block";

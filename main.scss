@@ -238,6 +238,30 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s;
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #69388c;
+        color: white;
+        h2 {
+            text-align: center;
+        }
+    }
+    
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        p {
+            display: flex;
+            justify-content: space-between;
+        }
+        padding: 5em 2em;
+    }
+    
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #69388c;
+        color: white;
+    }
 }
 /* Add Animation */
 @keyframes animatetop {
@@ -259,29 +283,4 @@ body {
         top: 0;
         opacity: 1;
     }
-}
-/* The Close Button */
-.modal-header {
-    padding: 2px 16px;
-    background-color: #69388c;
-    color: white;
-    h2 {
-        text-align: center;
-    }
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    p {
-        display: flex;
-        justify-content: space-between;
-    }
-    padding: 5em 2em;
-}
-
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #69388c;
-    color: white;
 }
