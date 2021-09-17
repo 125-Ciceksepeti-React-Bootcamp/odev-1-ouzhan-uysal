@@ -118,26 +118,49 @@ $(document).ready(function () {
         const bodyTag = document.querySelector("body");
         const formTag = document.getElementById("mainArticle");
         const gridTag = document.getElementById("mainAside");
-        if (dataId === "show") {
-            bodyTag.style.gridTemplateColumns = "20% 1fr 50%";
-            formTag.style.display = "";
-            gridTag.style.display = "";
-        } else if (dataId === "showForm") {
-            bodyTag.style.gridTemplateColumns = "20% 1fr 0";
-            formTag.style.display = "";
-            gridTag.style.display = "none";
-        } else if (dataId === "showGrid") {
-            bodyTag.style.gridTemplateColumns = "20% 0 1fr";
-            gridTag.style.display = "";
-            formTag.style.display = "none";
-        } else if (dataId === "hide") {
-            formTag.style.display = "none";
-            gridTag.style.display = "none";
+        // console.log(screen.width)
+        if (screen.width < 500) { // Grid'in responsive tasarımla ekranı bozmaması için
+            if (dataId === "show") {
+                formTag.style.display = "";
+                gridTag.style.display = "";
+            } else if (dataId === "showForm") {
+                formTag.style.display = "";
+                gridTag.style.display = "none";
+            } else if (dataId === "showCards") {
+                gridTag.style.display = "";
+                formTag.style.display = "none";
+            } else if (dataId === "hide") {
+                formTag.style.display = "none";
+                gridTag.style.display = "none";
+            } else {
+                alert("Bi sıkıntı var haciii")
+            }
         } else {
-            alert("Bi sıkıntı var haciii")
+            if (dataId === "show") {
+                bodyTag.style.gridTemplateColumns = "20% 1fr 50%";
+                formTag.style.display = "";
+                gridTag.style.display = "";
+            } else if (dataId === "showForm") {
+                bodyTag.style.gridTemplateColumns = "20% 1fr 0";
+                formTag.style.display = "";
+                gridTag.style.display = "none";
+            } else if (dataId === "showCards") {
+                bodyTag.style.gridTemplateColumns = "20% 0 1fr";
+                gridTag.style.display = "";
+                formTag.style.display = "none";
+            } else if (dataId === "hide") {
+                formTag.style.display = "none";
+                gridTag.style.display = "none";
+            } else {
+                alert("Bi sıkıntı var haciii")
+            }
         }
     });
 });
+// Links Active Status
+$(".nav-links li").on("click", function(){
+    $(this).addClass("active").siblings().removeClass('active');
+ });
 
 
 

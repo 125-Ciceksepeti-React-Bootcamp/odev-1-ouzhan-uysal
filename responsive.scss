@@ -8,6 +8,13 @@
                 img {
                     display: none;
                 }
+                .searchbar {
+                    form {
+                        input {
+                            width: 20em;
+                        }
+                    }
+                }
             }
         }
         #mainArticle {
@@ -16,7 +23,7 @@
         #mainNav {
             .nav-split {
                 .nav-links {
-                    display: none;
+                    // display: none;
                 }
             }
         }

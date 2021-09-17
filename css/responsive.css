@@ -9,8 +9,8 @@
   body #mainHeader .header-split img {
     display: none;
   }
-  body #mainNav .nav-split .nav-links {
-    display: none;
+  body #mainHeader .header-split .searchbar form input {
+    width: 20em;
   }
 }
 /*# sourceMappingURL=responsive.css.map */

@@ -36,6 +36,9 @@ aside {
         height: 100%;
         align-content: center;
         div {
+            &:first-of-type {
+                // background-color: #fff
+            }
             height: 100%;
             justify-self: center;
             display: grid;
@@ -52,16 +55,16 @@ aside {
                 input {
                     padding-left: 3rem;
                     border-radius: 5px;
-                    height: 3em;
                     width: 30em;
+                    height: 3em;
                 }
-                }
+
                 i {
                     display: block;
                     position: absolute;
                     font-size: 2em;
-                    padding-left: .5rem;
-                    padding-top: .5rem;
+                    padding-left: 0.5rem;
+                    padding-top: 0.5rem;
                 }
             }
         }
@@ -78,11 +81,22 @@ aside {
             display: grid;
             grid-template-columns: auto;
             li {
-                padding-bottom: .5rem;
+                padding-bottom: 0.5rem;
                 color: var(--mainColor);
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
                 list-style-type: none;
+                input {
+                    &[type="checkbox"] {
+                        justify-self: center;
+                    }
+                    &[type="radio"] {
+                        justify-self: center;
+                    }
+                    &[type="button"] {
+                        margin: 1em 0;
+                    }
+                }
             }
         }
     }
@@ -129,6 +143,16 @@ aside {
                             color: var(--mainColor);
                         }
                         a {
+                            color: var(--mainColor);
+                        }
+                    }
+                    &[class="active"] {
+                        background-color: var(--secondColor);
+                        border: 2px dashed var(--mainColor);
+                        a {
+                            color: var(--mainColor);
+                        }
+                        i {
                             color: var(--mainColor);
                         }
                     }

@@ -73,6 +73,7 @@ aside {
 #mainHeader .header-split .searchbar form input {
   padding-left: 3rem;
   border-radius: 5px;
+  width: 30em;
   height: 3em;
 }
 
@@ -80,8 +81,8 @@ aside {
   display: block;
   position: absolute;
   font-size: 2em;
-  padding-left: .5rem;
-  padding-top: .5rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 #mainArticle {
@@ -107,13 +108,27 @@ aside {
 }
 
 #mainArticle form ul li {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   color: var(--mainColor);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(10em, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
   list-style-type: none;
+}
+
+#mainArticle form ul li input[type="checkbox"] {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#mainArticle form ul li input[type="radio"] {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#mainArticle form ul li input[type="button"] {
+  margin: 1em 0;
 }
 
 #mainNav {
@@ -182,6 +197,19 @@ aside {
 }
 
 #mainNav .nav-split .nav-links ul li:hover a {
+  color: var(--mainColor);
+}
+
+#mainNav .nav-split .nav-links ul li[class="active"] {
+  background-color: var(--secondColor);
+  border: 2px dashed var(--mainColor);
+}
+
+#mainNav .nav-split .nav-links ul li[class="active"] a {
+  color: var(--mainColor);
+}
+
+#mainNav .nav-split .nav-links ul li[class="active"] i {
   color: var(--mainColor);
 }
 
