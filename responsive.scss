@@ -1,7 +1,7 @@
 @media all and (max-width: 768px) {
     body {
-        grid-template-areas: "nav" "header" "article" "aside" "footer";
-        grid-template-rows: 1fr 10% 1fr 1fr 10%;
+        grid-template-areas: "nav" "article" "header" "aside" "footer";
+        grid-template-rows: 1fr 1fr 10% 1fr 10%;
         grid-template-columns: 1fr;
         #mainHeader {
             .header-split {
@@ -11,7 +11,7 @@
             }
         }
         #mainArticle {
-            display: none;
+            // display: none;
         }
         #mainNav {
             .nav-split {
