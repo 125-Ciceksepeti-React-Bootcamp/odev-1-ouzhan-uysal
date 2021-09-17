@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: Georgia, "Times New Roman", Times, serif;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header header header" "nav article aside" "footer footer footer";
@@ -80,9 +81,9 @@ aside {
 #mainHeader .header-split .searchbar form i {
   display: block;
   position: absolute;
-  font-size: 2em;
-  padding-left: 0.5rem;
-  padding-top: 0.5rem;
+  font-size: 1.5em;
+  padding-left: .7rem;
+  padding-top: 1rem;
 }
 
 #mainArticle {
@@ -103,12 +104,12 @@ aside {
 #mainArticle form ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: (minmax(10em, 30rem))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(10em, 30rem));
 }
 
 #mainArticle form ul li {
-  padding-bottom: 0.5rem;
+  padding-bottom: 1em;
   color: var(--mainColor);
   display: -ms-grid;
   display: grid;
@@ -125,10 +126,6 @@ aside {
 #mainArticle form ul li input[type="radio"] {
   -ms-grid-column-align: center;
       justify-self: center;
-}
-
-#mainArticle form ul li input[type="button"] {
-  margin: 1em 0;
 }
 
 #mainNav {
@@ -167,7 +164,7 @@ aside {
 }
 
 #mainNav .nav-split .nav-links ul li {
-  padding: 0.5em;
+  padding: 1em;
   border: 0.5px solid var(--secondColor);
   border-radius: 5px;
   cursor: pointer;

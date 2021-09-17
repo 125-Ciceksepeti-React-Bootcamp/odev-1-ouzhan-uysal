@@ -119,7 +119,7 @@ $(document).ready(function () {
         const formTag = document.getElementById("mainArticle");
         const gridTag = document.getElementById("mainAside");
         // console.log(screen.width)
-        if (screen.width < 500) { // Grid'in responsive tasarımla ekranı bozmaması için
+        if (window.width < 500 || screen.width < 500) { // Grid'in responsive tasarımla ekranı bozmaması için
             if (dataId === "show") {
                 formTag.style.display = "";
                 gridTag.style.display = "";
@@ -158,9 +158,9 @@ $(document).ready(function () {
     });
 });
 // Links Active Status
-$(".nav-links li").on("click", function(){
+$(".nav-links li").on("click", function () {
     $(this).addClass("active").siblings().removeClass('active');
- });
+});
 
 
 
